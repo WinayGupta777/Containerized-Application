@@ -6,11 +6,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install && \
-    npm run build
-
 RUN echo $REACT_APP_BE_HOST > .env && \
     echo $REACT_APP_BE_PORT >> .env
+
+RUN npm install && \
+    npm run build
 
 # Stage 2
 
