@@ -1,16 +1,13 @@
 import "./App.css";
 import React from 'react';
 import axios from 'axios';
-import env from "dotenv";
-
-env.config();
 
 const App = () => {
   const [ip, setIp] = React.useState(null);
   const [msg, setMsg] = React.useState('');
 
-  const PORT = env?.REACT_APP_BE_PORT || 5000;
-  const HOST = env?.REACT_APP_BE_HOST || "localhost";
+  const PORT = process.env?.REACT_APP_BE_PORT || 5000;
+  const HOST = process.env?.REACT_APP_BE_HOST || "localhost";
 
   console.log("PORT: ", PORT);
   console.log("HOST: ", HOST);
