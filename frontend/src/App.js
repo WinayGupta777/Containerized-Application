@@ -9,6 +9,7 @@ const App = () => {
   const PORT = process.env?.REACT_APP_BE_PORT || 5000;
   const HOST = process.env?.REACT_APP_BE_HOST || "localhost";
 
+  console.log("NODE_ENV", process.env.NODE_ENV);
   console.log("PORT: ", PORT);
   console.log("HOST: ", HOST);
   console.log("env: ", process.env.REACT_APP_BE_HOST, process.env.REACT_APP_BE_PORT);
@@ -21,7 +22,7 @@ const App = () => {
       .catch(err => {
         setMsg("Error: " + err.message);
       })
-      // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
 
   return (
