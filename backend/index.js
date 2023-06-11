@@ -4,10 +4,13 @@ const ip = require('ip');
 const dotenv = require('dotenv');
 
 const app = express();
-app.use(cors());
-dotenv.config();
 
 const APP_PORT = process.env.APP_PORT || 5000;
+const APP_HOST = process.env.APP_HOST || "localhost";
+
+app.use(cors({ origin: `http://${APP_HOST}` }));
+dotenv.config();
+
 
 app.get('/', (req, res) => {
     res.send({
