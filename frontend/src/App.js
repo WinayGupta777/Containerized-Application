@@ -7,7 +7,7 @@ const App = () => {
   const [msg, setMsg] = React.useState('');
 
   const PORT = process.env?.REACT_APP_BE_PORT || 5000;
-  const HOST = process.env?.REACT_APP_BE_HOST || "localhost";
+  const HOST = process.env?.REACT_APP_BE_HOST || "backend";
 
   console.log("NODE_ENV", process.env.NODE_ENV);
   console.log("PORT: ", PORT);
