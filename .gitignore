@@ -9,3 +9,4 @@ backend/.env
 backend/package-lock.json
 
 auto.sh
+deploy.sh
